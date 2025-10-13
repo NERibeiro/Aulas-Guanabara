@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aula de DOM</title>
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        /*comentário css*/
+        background-color: rgb(200, 200, 200);
+        text-align: center;
+    }
+
+    button {
+        background-color: blue;
+        color: white;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <h1>Início dos estudos de DOM</h1>
+    <p>Parágrafo padrão</p>
+    <p>Aprendendo <strong>DOM</strong> em JavaScript</p>
+    <button class="button">Clique em Mim</button>
+</body>
+<script>
+    document.querySelector('button').onclick = function () {
+        document.querySelector('button').innerHTML = 'Clicou no botão'
+        document.querySelector('h1').style.color = 'red'
+        document.querySelector('p').innerHTML = 'Mudei o parágrafo ao clicar no botão'
+        document.querySelector('p').style.backgroundColor = 'yellow'
+        document.querySelector('button').style.color = 'green'
+        //  document.querySelector('p:nth-of-type(2)').innerHTML = 'Outro parágrafo alterado'
+        //  document.querySelector('p:nth-of-type(2)').style.backgroundColor = 'lightblue'
+    }
+</script>
+
+</html>
