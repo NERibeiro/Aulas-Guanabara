@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fbcdcd;
+            color: #333;
+            text-align: center;
+        } 
+        h1 {
+            color: #d9534f;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: 200px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="button"] {
+            padding: 8px 16px;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }   
+        input[type="button"]:hover {
+            background-color: #c9302c;
+        }
+        #res {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #5cb85c;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>Qual sua Nacionalidade</h1>
+    Nacionalidade da pessoa: <input type="text" id="nacionalidade" placeholder="Digite o país de origem">
+    <input type="button" value="Verificar" onclick="verificarNacionalidade()">
+    <div id="res">
+
+    </div>
+
+
+    <script>
+        function verificarNacionalidade() {
+            var nacionalidade = document.getElementById("nacionalidade");
+            var res = document.getElementById("res");
+            var nac = nacionalidade.value.toLowerCase(); // Corrigido para usar toLowerCase
+            res.innerHTML = `<p>Você nasceu em ${nac}</p>`;
+            
+            if (nac === "brasil") {
+                res.innerHTML += `Você é brasileiro(a)`
+            } else {
+                res.innerHTML += `Você é estrangeiro(a)`
+            }
+        }
+            
+
+    </script>
+</body>
+</html>
